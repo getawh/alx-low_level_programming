@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h> // Include standard C library header for printf function
+#include <stdio.h> /* Include standard C library header for printf function */
 
 // Function prototypes
 int _putchar(char c);
