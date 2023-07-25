@@ -10,14 +10,12 @@ void rev_string(char *s)
     char *end = s;
     char temp;
 
-    // Move the 'end' pointer to the end of the string
     while (*end != '\0')
     {
         end++;
     }
     end--;
 
-    // Swap characters from start and end until they meet in the middle
     while (start < end)
     {
         temp = *start;
