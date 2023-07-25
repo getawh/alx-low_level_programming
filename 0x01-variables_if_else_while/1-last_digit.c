@@ -2,10 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
   int n;
