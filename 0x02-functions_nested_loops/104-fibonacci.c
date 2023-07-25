@@ -2,7 +2,7 @@
 
 int main() {
     int num1 = 1, num2 = 2, next;
-    int count = 2; // Count starts at 2 since we already have 1 and 2
+    int count = 2; 
 
     printf("%d, %d", num1, num2);
 
