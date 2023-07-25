@@ -24,8 +24,6 @@ void rev_string(char *s);
 /* 6-puts2.c */
 void puts2(char *str);
 
-char *_strcpy(char *dest, const char *src)
-
 /* 7-puts_half.c */
 void puts_half(char *str);
 
@@ -33,7 +31,7 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 
 /* 9-strcpy.c */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, const char *src)
 
 /* 100-print_number.c */
 void print_number(int n);
