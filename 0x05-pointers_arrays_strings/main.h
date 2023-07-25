@@ -10,7 +10,7 @@ void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 
 /* 2-strlen.c */
-int _strlen(char *s);
+int strlen(char *s);
 
 /* 3-puts.c */
 void _puts(char *str);
@@ -31,7 +31,7 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 
 /* 9-strcpy.c */
-char *_strcpy(char *dest, char *src);
+char *strcpy(char *dest, char *src);
 
 /* 100-print_number.c */
 void print_number(int n);
