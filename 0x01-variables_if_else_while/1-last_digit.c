@@ -5,8 +5,8 @@
 /**
  * main - Entry point of the program
  *
- * Description: This program generates a random number, prints the number,
- * and checks if it is positive, negative, or zero.
+ * Description: This program generates a random number, prints its last digit,
+ * and provides additional information about the last digit.
  *
  * Return: Always 0 (Success)
  */
@@ -17,19 +17,19 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	printf("%d is ", n);
+	printf("Last digit of %d is %d and is ", n, n % 10);
 
-	if (n > 0)
+	if (n % 10 > 5)
 	{
-		printf("positive");
+		printf("greater than 5");
 	}
-	else if (n == 0)
+	else if (n % 10 == 0)
 	{
-		printf("zero");
+		printf("0");
 	}
 	else
 	{
-		printf("negative");
+		printf("less than 6 and not 0");
 	}
 
 	printf("\n");
