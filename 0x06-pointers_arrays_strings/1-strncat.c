@@ -1,47 +1,32 @@
-Write a function that concatenates two strings.
-
-Prototype: char *_strncat(char *dest, char *src, int n);
-The _strncat function is similar to the _strcat function, except that
-it will use at most n bytes from src; and
-src does not need to be null-terminated if it contains n or more bytes
-Return a pointer to the resulting string dest
-FYI: The standard library provides a similar function: strncat. Run man strncat to learn more.
-
-julien@ubuntu:~/0x06$ cat 1-main.c
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
+ * _strncat - Concatenates two strings.
+ * @dest: The destination string where src will be appended to.
+ * @src: The source string to be appended.
+ * @n: The maximum number of bytes to be copied from src.
  *
- * Return: Always 0.
+ * Return: A pointer to the resulting string dest.
  */
-int main(void)
+char *_strncat(char *dest, char *src, int n)
 {
-    char s1[98] = "Hello ";
-    char s2[] = "World!\n";
-    char *ptr;
+    char *ptr_dest = dest;
+    char *ptr_src = src;
 
-    printf("%s\n", s1);
-    printf("%s", s2);
-    ptr = _strncat(s1, s2, 1);
-    printf("%s\n", s1);
-    printf("%s", s2);
-    printf("%s\n", ptr);
-    ptr = _strncat(s1, s2, 1024);
-    printf("%s", s1);
-    printf("%s", s2);
-    printf("%s", ptr);
-    return (0);
+    while (*ptr_dest != '\0')
+    {
+        ptr_dest++;
+    }
+
+    while (*ptr_src != '\0' && n > 0)
+    {
+        *ptr_dest = *ptr_src;
+        ptr_dest++;
+        ptr_src++;
+        n--;
+    }
+
+    *ptr_dest = '\0';
+
+    return dest;
 }
-julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-strncat.c -o 1-strncat
-julien@ubuntu:~/0x06$ ./1-strncat 
-Hello 
-World!
-Hello W
-World!
-Hello W
-Hello WWorld!
-World!
-Hello WWorld!
-julien@ubuntu:~/0x06$ 
