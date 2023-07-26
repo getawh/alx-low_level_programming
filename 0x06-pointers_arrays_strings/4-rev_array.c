@@ -15,12 +15,10 @@ void reverse_array(int *a, int n)
 
     while (start < end)
     {
-        // Swap the elements at positions start and end
         temp = a[start];
         a[start] = a[end];
         a[end] = temp;
 
-        // Move towards the middle of the array
         start++;
         end--;
     }
